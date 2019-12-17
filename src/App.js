@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const news = {
+  "title": "Trump News ",
+  "news": [
+    {
+      "id": "1",
+      "keywords":"trump",
+      "title": "22",
+      "snippets": "11"
+    },
+    
+  ]
+};
+const NewsList = ({ courses }) => (
+  <div>
+    { news.map(new => <Course course={ course } />) }
+  </div>
+);
 
-export default App;
+const Course = ({ course }) => (
+  <button>
+    { getCourseTerm(course) } CS { getCourseNumber(course) }: { course.title }
+  </button>
+);
+
+class App extends Component {
+  render(){
+    return(
+      <div>
+
+      </div>
+  )}}
+export default App
